@@ -60,3 +60,50 @@ export PATH=$PATH:$GOPATH/bin
 ```
 go get github.com/nsf/gocode
 ```
+
+## Primitive Types
+
+* Numeric types
+  * Integers
+    * Signed Integers
+    * ```int``` type has varying size, but min 32 bits
+    * ```int8``` through ```int64```
+  * Unsigned integers
+    * 8 bit (```byte``` or ```uint8```) through ```uint32```
+  * Arithmetic operations
+    * Addition, subtraction, multiplication, division, remainder
+  * Bitwise operations
+    * and (```&```) or (```|```), xor(```^```), and not (```&^```)
+  * Zero value is 0
+  * Can't mix types in same family (e.g. ```uint16``` + ```uint32``` = error)
+  * Floating points numbers
+    * Follows IEEE-754 standard
+    * Zero value is 0
+    * 32 and 64 bit versions
+    * Literal styles
+      * Decimal (3.14)
+      * Exponential (13e18 or 2E10)
+      * Mixed (13.7e12)
+    * Arithmetic operations
+      * Addition, subtraction, multiplication, division
+  * Complex numbers
+    * Zero value is (0+0i)
+    * 64 and 128 bit versions
+    * Built-in functions
+      * ```complex``` - make complex number from two floats
+      * ```real``` - get real part as float
+      * ```imag``` - get imaginary part as float
+    * Arithmetic operations
+      * Addition, subtraction, multiplication, division
+  * Text types
+    * Strings
+      * UTF-8
+      * Immutable
+      * Can be concatenated with plus (```+```) operator
+      * Can be converted to []byte
+    * Rune
+      * UTF-32
+      * Alias for ```int32```
+      * Special methods normally required to process
+        * e.g. ```strings.Reader#ReadRune```
+
